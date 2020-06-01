@@ -1,5 +1,4 @@
 import os
-# from urllib.request import urlretrieve  # 第一种方法
 import requests  # 第二种方法
 from bs4 import BeautifulSoup
 
@@ -28,8 +27,8 @@ for ul in img_ul:
     src = ul
     print(src)
 
-    # 得到具体的图片连接
-    # stream=True：时时刻刻下载？
+    # 得到具体的连接
+    # stream=True：时时刻刻下载
     r = requests.get(URL + src, stream=True)
 
     img_name = src.split('/')[-1]  # 去掉字符串最后一个/之前的东东，作为文件名
